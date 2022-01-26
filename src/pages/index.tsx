@@ -5,6 +5,7 @@ import Head from 'next/head'
 
 import Section1 from "../components/Section1/index"
 
+
 import { GetStaticProps } from "next"
 import { getPrismicClient } from "../services/prismic"
 import Prismic from '@prismicio/client'
@@ -51,7 +52,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
     const prismic = getPrismicClient()
 
-
     const response = await prismic.query<any>([
         Prismic.predicates.at('document.type', 'section_1')
     ], {
@@ -79,10 +79,7 @@ export const getStaticProps: GetStaticProps = async () => {
             group: value.data.group_section_2,
             title_2: RichText.asText(value.data.title_2_section_2),
         }
-
     })
-
-    
 
     const elementsSection3 = response.results.map(value => {
 

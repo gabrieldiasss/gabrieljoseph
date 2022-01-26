@@ -52,7 +52,7 @@ export const Grid = styled.div`
     div {
         background-color: #FFABAB;
         font-size: 2.4rem;
-        padding: 2rem;
+        padding: 1rem;
         display: flex;
         align-items: center;
 

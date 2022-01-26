@@ -32,8 +32,8 @@ export const Texts = styled.div`
     margin-right: -5rem;
 
     @media(max-width: 1000px) {
-            margin-right: 0;
-        }
+        margin-right: 0;
+    }
 
     h1 {
         font-size: 3rem;
@@ -89,6 +89,10 @@ export const Img = styled.div`
 
     img {
         width: 35rem;
+
+        @media(max-width: 1200px) {
+            width: 30rem;
+        }
 
         @media(max-width: 1000px) {
             margin-top: 3rem;

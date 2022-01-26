@@ -18,11 +18,13 @@ export default function Section2({ data }: ElementsSectionProps) {
                         <div className='line'></div>
 
                         <Grid>
-                            {value.group.map((v, key) => (
+                            
+                            {value.group.map((v: any, key) => (
                                 <div key={key} >
-                                
+                                    <div>{v.box[0].text}</div>
                                 </div>
                             ))}
+
                         </Grid>
 
                         <h1>{value.title_2}</h1>
