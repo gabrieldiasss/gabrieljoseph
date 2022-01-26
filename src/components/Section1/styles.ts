@@ -76,7 +76,7 @@ export const Img = styled.div`
     margin-left: 1rem;
 
     img {
-        width: 30rem;
+        width: 34rem;
 
         @media(max-width: 1000px) {
             margin-top: 3rem;
