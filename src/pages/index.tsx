@@ -6,6 +6,8 @@ import Head from 'next/head'
 import Section1 from "../components/Section1/index"
 
 
+
+
 import { GetStaticProps } from "next"
 import { getPrismicClient } from "../services/prismic"
 import Prismic from '@prismicio/client'
