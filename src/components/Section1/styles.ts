@@ -60,6 +60,7 @@ export const Texts = styled.div`
         font-size: 2rem;
         color: rgb(255, 255, 255, 0.9);
         margin-top: 1.4rem;
+        background-color: #fe0000;
     }
 
     p {

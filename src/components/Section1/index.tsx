@@ -1,16 +1,14 @@
-import Image from 'next/image'
-
-import Logo from '../../images/logo.png'
-import GabrielJoseph from '../../images/gabriel.png'
-import { Text } from '../../types'
 
 import { Container, Content, Texts, Img } from './styles'
 
+
+import { Text } from '../../types'
+
 interface Section1Props {
-    texts: Text[]
+    data: Text[]
 }
 
-export default function Section1({ texts }: Section1Props) {
+export default function Section1({ data }: Section1Props) {
 
     return (
         <Container>
@@ -18,20 +16,18 @@ export default function Section1({ texts }: Section1Props) {
                 <Texts>
                     <img src="/images/logo.png" alt="" />
 
-                    {texts.map((text, key) => (
+                    {data.map((value, key) => (
                         <div key={key} >
-                            <h1>{text.title}</h1>
-                            <h2>{text.subtitle}</h2>
-                            <button style={{backgroundColor: "#FE0000"}} >QUERO APRENDER</button>
-                            <p>De <span>R${text.old_price}</span> por R${text.new_price} à vista.</p>
+                            <h1>{value.title}</h1>
+                            <h2>{value.subtitle}</h2>
+                            <a href={value.link_button}><button>QUERO APRENDER</button></a>
+                            <p>De {value.old_price} para {value.new_price} à vista.</p>
                         </div>
                     ))}
                 </Texts>
 
                 <Img>
-                    <img
-                        src="/images/gabriel.png"
-                    />
+                    <img src="/images/gabriel.png"/>
                 </Img>
             </Content>
         </Container>
