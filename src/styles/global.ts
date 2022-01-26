@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    :root {
+        --background-black: #0C0C0E;
+        --red: #fe0000;
+    }
+
     html {
         @media (max-width: 1440px) {
             font-size: 93.75%; // 15px

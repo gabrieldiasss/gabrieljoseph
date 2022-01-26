@@ -1,11 +1,11 @@
-import { Text } from '../../types'
+import { ElementsSection2 } from '../../types'
 import { Container, Content, Grid } from './styles'
 
-interface Section2Props {
-    data: Text[]
+interface ElementsSectionProps {
+    data: ElementsSection2[]
 }
 
-export default function Section2({ data }: Section2Props) {
+export default function Section2({ data }: ElementsSectionProps) {
 
     return (
         <Container>
@@ -14,19 +14,19 @@ export default function Section2({ data }: Section2Props) {
 
                 {data.map((value, key) => (
                     <div key={key}>
-                        <h1>{value.title_section_2}</h1>
+                        <h1>{value.title}</h1>
                         <div className='line'></div>
 
                         <Grid>
-                            {value.group_section_2.map((v, key) => (
+                            {value.group.map((v, key) => (
                                 <div key={key} >
-                                    {v.box}
+                                
                                 </div>
                             ))}
                         </Grid>
 
-                        <h1>{value.title_2_section_2}</h1>
-                        <p>Posts e Carrosséis profissionais!</p>
+                        <h1>{value.title_2}</h1>
+                        <p>Posts e Carrosséis profissionais</p>
                     </div>
                 ))}
 

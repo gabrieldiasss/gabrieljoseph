@@ -2,13 +2,13 @@
 import { Container, Content, Texts, Img } from './styles'
 
 
-import { Text } from '../../types'
+import { ElementsSection1 } from '../../types'
 
-interface Section1Props {
-    data: Text[]
+interface ElementsSectionProps {
+    data: ElementsSection1[]
 }
 
-export default function Section1({ data }: Section1Props) {
+export default function Section1({ data }: ElementsSectionProps) {
 
     return (
         <Container>

@@ -24,7 +24,6 @@ export const Content = styled.div`
             width: 60%;
             height: 10px;
             margin: 3rem auto;
-            display: block;
             background: linear-gradient(45deg, rgba(255, 46, 46, 0.1), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46, 0.1));
         }
 
