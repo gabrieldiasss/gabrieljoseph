@@ -94,7 +94,8 @@ export const getStaticProps: GetStaticProps = async () => {
     return {
         props: {
             elementsSection1, elementsSection2, elementsSection3
-        }
+        },
+        revalidate: 10
     }
 }
 
