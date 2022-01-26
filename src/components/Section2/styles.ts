@@ -9,7 +9,7 @@ export const Container = styled.section`
 export const Content = styled.div`
 
     width: 90%;
-    max-width: 1100px;
+    max-width: 800px;
     margin: 0 auto;
 
     div {
@@ -21,7 +21,7 @@ export const Content = styled.div`
         }
 
         .line {
-            width: 60%;
+            width: 80%;
             height: 10px;
             margin: 3rem auto;
             background: linear-gradient(45deg, rgba(255, 46, 46, 0.1), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46, 0.1));
@@ -55,6 +55,7 @@ export const Grid = styled.div`
         padding: 1rem;
         display: flex;
         align-items: center;
+        justify-content: center;
 
         border-radius: 0.8rem;
     }
