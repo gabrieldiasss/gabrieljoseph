@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await prismic.query<any>([
         Prismic.predicates.at('document.type', 'section_1')
     ], {
-        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3',],
+        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3', 'section_1.section_3_group', ],
         pageSize: 100,
     })
 
@@ -86,7 +86,8 @@ export const getStaticProps: GetStaticProps = async () => {
     const elementsSection3 = response.results.map(value => {
 
         return {
-            title_section_3: RichText.asText(value.data.title_section_3)
+            title: RichText.asText(value.data.title_section_3),
+            group: value.data.section_3_group,
         }
 
     })

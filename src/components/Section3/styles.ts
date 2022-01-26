@@ -12,6 +12,9 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
 
+    margin: 0 auto;
+    max-width: 800px;
+
     color: #fff;
 
     h1 {
@@ -44,7 +47,7 @@ export const Box = styled.div`
 
     p {
         font-size: 2rem;
-        max-width: 280px;
+        
         font-weight: 600;
     }
 

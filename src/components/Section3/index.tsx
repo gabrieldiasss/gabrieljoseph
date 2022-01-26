@@ -13,11 +13,17 @@ export default function Section3({ data }: ElementsSectionProps) {
 
             {data.map((value, key) => (
                 <Content key={key} >
-                    <h1>{value.title_section_3}</h1>
+                    <h1>{value.title}</h1>
                     <div className='line'></div>
 
                     <Grid>
                         
+                        {value.group.map((v, key) => (
+                            <Box key={key} >
+                                <h1>{v.box_number_section_3[0].text}</h1>
+                                <p>{v.box_section_3[0].text}</p> 
+                            </Box>
+                        ))}
 
                     </Grid>
 
