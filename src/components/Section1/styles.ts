@@ -29,12 +29,20 @@ export const Content = styled.div`
 
 export const Texts = styled.div`
 
+    margin-right: -5rem;
+
+    @media(max-width: 1000px) {
+            margin-right: 0;
+        }
+
     h1 {
         font-size: 3rem;
         
         color: #fff;
 
         margin-top: 2rem;
+
+        
 
         @media(max-width: 500px) {
             font-size: 2rem;
@@ -43,7 +51,11 @@ export const Texts = styled.div`
 
     h2 {
         color: rgb(255, 255, 255, 0.9);
-        margin-top: 1.6rem;
+        max-width: 500px;
+
+        @media(max-width: 1000px) {
+            margin: 1rem auto 0;
+        }
 
         @media(max-width: 500px) {
             font-size: 1.2rem;
@@ -76,7 +88,7 @@ export const Img = styled.div`
     margin-left: 1rem;
 
     img {
-        width: 34rem;
+        width: 35rem;
 
         @media(max-width: 1000px) {
             margin-top: 3rem;
