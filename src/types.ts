@@ -2,7 +2,7 @@ interface GroupSection2 {
     box: string;
 }
 
-export interface GroupSection3 {
+interface GroupSection3 {
     box_number_section_3: {text: string};
     box_section_3: {text: string};
 }
@@ -24,4 +24,14 @@ export interface ElementsSection2 {
 export interface ElementsSection3 {
     title: string;
     group: GroupSection3[];
+}
+
+interface GroupSection4 {
+    title1: {text: string};
+    about: {text: string};
+}
+
+export interface ElementsSection4 {
+    title: string,
+    group: GroupSection4[];
 }

@@ -6,19 +6,24 @@ export const Container = styled.section`
 
 export const Content = styled.div`
 
-    padding-top: 2rem;
+    padding: 2rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    width: 80%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
 
     color: #fff;
 
     h1 {
         font-size: 3rem;
+
+        @media(max-width: 1000px) {
+            text-align: center;
+        } 
     }
 
     .line {
@@ -27,6 +32,8 @@ export const Content = styled.div`
         margin: 3rem auto;
         background: linear-gradient(45deg, rgba(255, 46, 46, 0.1), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46), rgba(255, 46, 46, 0.1));
     }
+
+    
 `
 
 export const Grid = styled.div`
@@ -34,6 +41,10 @@ export const Grid = styled.div`
     grid-template-columns: repeat(2, 1fr);
 
     grid-gap: 3rem;
+
+    @media(max-width: 1000px) {
+        grid-template-columns: 1fr;
+    } 
 
 `
 
@@ -50,5 +61,9 @@ export const Box = styled.div`
         
         font-weight: 600;
     }
+
+    @media(max-width: 1000px) {
+        text-align: center;
+    } 
 
 `
