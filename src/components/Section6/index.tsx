@@ -1,6 +1,11 @@
+import { ElementsSection6 } from '../../types'
 import { Container, Content, Texts, Img, Networks, Insta } from './styles'
 
-export default function Section6() {
+interface ElementsSectionProps {
+    data: ElementsSection6[]
+}
+
+export default function Section6({ data }: ElementsSectionProps) {
 
     return (
 
@@ -8,19 +13,17 @@ export default function Section6() {
 
             <Content>
 
-                <Texts>
+                {data.map((value, key) => (
+                    <Texts key={key}>
+                        <h1>{value.title}</h1>
 
-                    <h1>Prazer, eu sou Gabriel Joseph,</h1>
+                        <h2>{value.subtitle}</h2>
 
-                    <h2>Talvez você ainda não me conheça</h2>
-
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, quas quisquam dignissimos omnis esse deleniti aliquid quos quis pariatur eius consectetur officiis incidunt amet minus debitis sapiente optio sed nisi.
-
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi ut, illum veniam praesentium debitis error necessitatibus omnis velit molestias a blanditiis dolore assumenda eaque? Quia nulla laudantium voluptate corporis consectetur?
-                    </p>
-
-                </Texts>
+                        <p>
+                            {value.text}
+                        </p>
+                    </Texts>
+                ))}
 
                 <Img>
                     <img src="/images/gabriel.png" alt="Gabriel Joseph" />
@@ -30,7 +33,7 @@ export default function Section6() {
 
             <Networks>
                 <Insta />
-                <a href='https://www.instagram.com' >@gabrieljosephoficial</a>
+                <a href='https://www.instagram.com/gabrieljosephoficial/'>@gabrieljosephoficial</a>
             </Networks>
 
         </Container>

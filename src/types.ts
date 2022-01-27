@@ -41,3 +41,9 @@ export interface ElementsSection5 {
     subtitle: GroupSection4[];
     price: number;
 }
+
+export interface ElementsSection6 {
+    title: string;
+    subtitle: string;
+    text: string;
+}

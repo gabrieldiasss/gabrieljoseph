@@ -14,7 +14,7 @@ import Prismic from '@prismicio/client'
 
 import { RichText, Link } from 'prismic-dom'
 
-import { ElementsSection1, ElementsSection2, ElementsSection3, ElementsSection4, ElementsSection5 } from "../types"
+import { ElementsSection1, ElementsSection2, ElementsSection3, ElementsSection4, ElementsSection5, ElementsSection6 } from "../types"
 
 import Section2 from "../components/Section2"
 import Section3 from "../components/Section3"
@@ -28,9 +28,10 @@ interface ElementsProps {
     elementsSection3: ElementsSection3[];
     elementsSection4: ElementsSection4[];
     elementsSection5: ElementsSection5[];
+    elementsSection6: ElementsSection6[];
 }
 
-export default function Home({ elementsSection1, elementsSection2, elementsSection3, elementsSection4, elementsSection5}: ElementsProps) {
+export default function Home({ elementsSection1, elementsSection2, elementsSection3, elementsSection4, elementsSection5, elementsSection6}: ElementsProps) {
 
     console.log(elementsSection1)
     console.log(elementsSection2)
@@ -55,7 +56,7 @@ export default function Home({ elementsSection1, elementsSection2, elementsSecti
 
             <Section5 data={elementsSection5} />
 
-            <Section6 />
+            <Section6 data={elementsSection6} />
 
         </>
     )
@@ -68,7 +69,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await prismic.query<any>([
         Prismic.predicates.at('document.type', 'section_1')
     ], {
-        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3', 'section_1.section_3_group', 'section_1.title_section_4', 'section_1.group_section_4', 'section_1.title_section_5', 'section_1.subtitle_section_5', 'section_1.price_section_5'],
+        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3', 'section_1.section_3_group', 'section_1.title_section_4', 'section_1.group_section_4', 'section_1.title_section_5', 'section_1.subtitle_section_5', 'section_1.price_section_5', 'section_1.title_section_6', 'section_1.subtitle_section_6', 'section_1.text_section_6'],
         pageSize: 100,
     })
 
@@ -132,9 +133,20 @@ export const getStaticProps: GetStaticProps = async () => {
 
     })
 
+    const elementsSection6 = response.results.map(value => {
+
+        return {
+            title: RichText.asText(value.data.title_section_6),
+            subtitle: RichText.asText(value.data.subtitle_section_6),
+            text: RichText.asText(value.data.text_section_6)
+        }
+
+    })
+
     return {
         props: {
-            elementsSection1, elementsSection2, elementsSection3, elementsSection4, elementsSection5
+            elementsSection1, elementsSection2, elementsSection3, elementsSection4, elementsSection5,
+            elementsSection6
         },
         revalidate: 10
     }
