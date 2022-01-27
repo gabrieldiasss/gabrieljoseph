@@ -9,7 +9,7 @@ export const Container = styled.section`
 export const Content = styled.div`
 
     width: 90%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
 
     div {
@@ -47,7 +47,7 @@ export const Content = styled.div`
 export const Grid = styled.div`
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
     div {
         background-color: #FFABAB;

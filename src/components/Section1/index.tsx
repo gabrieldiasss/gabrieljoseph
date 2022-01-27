@@ -21,7 +21,7 @@ export default function Section1({ data }: ElementsSectionProps) {
                             <h1>{value.title}</h1>
                             <h2>{value.subtitle}</h2>
                             <a href={value.link_button}><button>QUERO APRENDER</button></a>
-                            <p>De {value.old_price} para {value.new_price} à vista.</p>
+                            <p>De {value.old_price} por {value.new_price} à vista.</p>
                         </div>
                     ))}
                 </Texts>

@@ -6,8 +6,6 @@ import Head from 'next/head'
 import Section1 from "../components/Section1/index"
 
 
-
-
 import { GetStaticProps } from "next"
 import { getPrismicClient } from "../services/prismic"
 import Prismic from '@prismicio/client'
@@ -69,7 +67,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const response = await prismic.query<any>([
         Prismic.predicates.at('document.type', 'section_1')
     ], {
-        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3', 'section_1.section_3_group', 'section_1.title_section_4', 'section_1.group_section_4', 'section_1.title_section_5', 'section_1.subtitle_section_5', 'section_1.price_section_5', 'section_1.title_section_6', 'section_1.subtitle_section_6', 'section_1.text_section_6'],
+        fetch: ['section_1.title', 'section_1.subtitle', 'section_1.link_button', 'section_1.old_price', 'section_1.new_price', 'section_1.title_section_2', 'section_1.group_section_2', 'section_1.title_2_section_2', 'section_1.title_section_3', 'section_1.section_3_group', 'section_1.title_section_4', 'section_1.group_section_4', 'section_1.title_section_5', 'section_1.subtitle_section_5', 'section_1.price_section_5', 'section_1.link_button_section_5', 'section_1.title_section_6', 'section_1.subtitle_section_6', 'section_1.text_section_6'],
         pageSize: 100,
     })
 
@@ -91,7 +89,6 @@ export const getStaticProps: GetStaticProps = async () => {
             }).format(value.data.new_price),
         }
     })
-
 
     const elementsSection2 = response.results.map(value => {
 
@@ -128,7 +125,8 @@ export const getStaticProps: GetStaticProps = async () => {
             price: new Intl.NumberFormat('pt-br', {
                 style: 'currency',
                 currency: 'BRL'
-            }).format(value.data.price_section_5)
+            }).format(value.data.price_section_5),
+            link_button: Link.url(value.data.link_button_section_5)
         }
 
     })

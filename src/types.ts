@@ -40,6 +40,7 @@ export interface ElementsSection5 {
     title: string;
     subtitle: GroupSection4[];
     price: number;
+    link_button: string;
 }
 
 export interface ElementsSection6 {

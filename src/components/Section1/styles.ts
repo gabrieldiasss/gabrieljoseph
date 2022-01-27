@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
-    background: #000;
+    background: var(--background-black);
 `
 
 export const Content = styled.div`
@@ -17,6 +17,7 @@ export const Content = styled.div`
     @media(max-width: 1000px) {
         text-align: center;
         display: block;
+        
     }
 
     @media(max-width: 800px) {
@@ -63,7 +64,7 @@ export const Texts = styled.div`
     }
 
     img {
-        width: 250px;
+        width: 200px;
     }
 
     button {
