@@ -1,34 +1,40 @@
-import { 
+import { ElementsSection5 } from '../../types'
+import {
     Container, Content, Texts, Img, Price, Bottom
 } from './styles'
 
-export default function Section5() {
+interface ElementsSectionProps {
+    data: ElementsSection5[]
+}
 
-    
+export default function Section5({ data }: ElementsSectionProps) {
 
     return (
         <Container>
 
-           <Content>
+            <Content>
 
                 <Img>
                     <img src="/images/member.png" alt="Aréa de Membros Gabriel Joseph" />
                 </Img>
 
-                <Texts>
+                {data.map((value, key) => (
+                    <Texts key={key}>
 
-                    <h1>Acesse o curso a qualquer momento!</h1>
+                        <h1>{value.title}</h1>
 
-                    <h2>Tudo isso para que você possa assistir as aulas no seu tempo</h2>
+                        <h2>{value.subtitle}</h2>
 
-                    <Price>
-                        <p>Apenas</p>
-                        <h1>R$ 97,00</h1>
-                    </Price>
+                        <Price>
+                            <p>Apenas</p>
+                            <h1>{value.price}</h1>
+                        </Price>
 
-                </Texts>
+                    </Texts>
+                ))}
 
-            </Content> 
+
+            </Content>
 
             <Bottom>
                 <button>SIM, EU QUERO UMA VAGA</button>

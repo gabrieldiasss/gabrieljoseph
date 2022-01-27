@@ -32,6 +32,12 @@ interface GroupSection4 {
 }
 
 export interface ElementsSection4 {
-    title: string,
+    title: string;
     group: GroupSection4[];
+}
+
+export interface ElementsSection5 {
+    title: string;
+    subtitle: GroupSection4[];
+    price: number;
 }
