@@ -43,8 +43,6 @@ export const Texts = styled.div`
 
         margin-top: 2rem;
 
-        
-
         @media(max-width: 500px) {
             font-size: 2rem;
         }
@@ -95,8 +93,10 @@ export const Img = styled.div`
         }
 
         @media(max-width: 500px) {
-            max-width: 100%;
-            height: auto;
+            /* max-width: 100%;
+            height: auto; */
+
+            display: none;
         }
         
     }

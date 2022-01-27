@@ -20,7 +20,6 @@ export default function Section5({ data }: ElementsSectionProps) {
                             <img src="/images/member.png" alt="Aréa de Membros Gabriel Joseph" />
                         </Img>
 
-
                         <Texts key={key}>
 
                             <h1>{value.title}</h1>
