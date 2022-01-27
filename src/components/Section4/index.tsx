@@ -34,13 +34,8 @@ export default function Section4({ data }: ElementsSectionProps) {
                             </div>
                         ))}
                     </Grid>
-
-
                 </Content>
             ))}
-
-
-
         </Container>
     )
 

@@ -14,7 +14,7 @@ export default function Section1({ data }: ElementsSectionProps) {
         <Container>
             <Content>
                 <Texts>
-                    <img src="/images/logo.png" alt="" />
+                    <img src="/images/logo.png" alt="Logo Posts e Carrosséis" />
 
                     {data.map((value, key) => (
                         <div key={key} >
@@ -27,7 +27,7 @@ export default function Section1({ data }: ElementsSectionProps) {
                 </Texts>
 
                 <Img>
-                    <img src="/images/gabriel.png"/>
+                    <img src="/images/gabriel.png" alt="Gabriel Joseph Posts e Carrosséis profissionais"/>
                 </Img>
             </Content>
         </Container>

@@ -12,7 +12,7 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
 
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     max-width: 900px;
 

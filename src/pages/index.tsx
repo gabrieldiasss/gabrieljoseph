@@ -19,6 +19,7 @@ import { ElementsSection1, ElementsSection2, ElementsSection3, ElementsSection4 
 import Section2 from "../components/Section2"
 import Section3 from "../components/Section3"
 import Section4 from "../components/Section4"
+import Section5 from "../components/Section5"
 
 interface ElementsProps {
     elementsSection1: ElementsSection1[];
@@ -50,6 +51,8 @@ export default function Home({ elementsSection1, elementsSection2, elementsSecti
 
             <Section4 data={elementsSection4} />
 
+            <Section5 />
+
         </>
     )
 }
@@ -73,10 +76,17 @@ export const getStaticProps: GetStaticProps = async () => {
             title: RichText.asText(value.data.title),
             subtitle: RichText.asText(value.data.subtitle),
             link_button: Link.url(value.data.link_button),
-            old_price: value.data.old_price,
-            new_price: value.data.new_price,
+            old_price: new Intl.NumberFormat('pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(value.data.old_price),
+            new_price: new Intl.NumberFormat('pt-br', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(value.data.new_price),
         }
     })
+
 
     const elementsSection2 = response.results.map(value => {
 

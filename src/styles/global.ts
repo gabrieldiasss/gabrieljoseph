@@ -50,6 +50,12 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         border: 0;
         outline: 0;
+
+        padding: 0.8rem 2rem;
+        font-size: 2rem;
+        border-radius: 0.8rem;
+        background-color: var(--red);
+        color: #fff;
     }
 
     a {

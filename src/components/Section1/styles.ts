@@ -67,12 +67,7 @@ export const Texts = styled.div`
     }
 
     button {
-        padding: 0.6rem 1rem;
-        border-radius: 0.4rem;
-        font-size: 2rem;
-        color: rgb(255, 255, 255, 0.9);
         margin-top: 1.4rem;
-        background-color: var(--red);
     }
 
     p {
