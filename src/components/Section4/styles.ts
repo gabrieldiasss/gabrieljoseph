@@ -33,7 +33,6 @@ export const Title = styled.h1`
         }
     }
 
- 
 `
 
 export const Grid = styled.div`
@@ -54,6 +53,9 @@ export const Grid = styled.div`
 
         color: rgba(255, 255, 255, 0.9);
 
+        width: 90%;
+        margin: 0 auto;
+
         h1 {
             font-size: 2.5rem;
         }
@@ -69,7 +71,7 @@ export const Grid = styled.div`
         }
 
         @media(max-width: 500px) {
-            padding: 1.6rem 3rem;
+            padding: 1.6rem 2rem;
         }
  
     }
