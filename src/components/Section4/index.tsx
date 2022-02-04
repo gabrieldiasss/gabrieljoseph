@@ -26,7 +26,7 @@ export default function Section4({ data }: ElementsSectionProps) {
 
                     </Title>
 
-                    <Grid key={key} >
+                    <Grid >
                         {value.group.map((v, key) => (
                             <div key={key} >
                                 <h1>{v.title1[0].text}</h1>

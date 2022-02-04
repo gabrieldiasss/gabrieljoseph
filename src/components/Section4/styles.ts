@@ -12,8 +12,6 @@ export const Content = styled.div`
     margin: 0 auto;
 
     text-align: center;
-
-
 `
 
 export const Title = styled.h1`
@@ -63,6 +61,7 @@ export const Grid = styled.div`
         p {
             font-size: 1.4rem;
             max-width: 650px;
+            margin: 0 auto;
         }
 
         & + div {

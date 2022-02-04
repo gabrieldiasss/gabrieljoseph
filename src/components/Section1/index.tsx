@@ -1,6 +1,4 @@
-
 import { Container, Content, Texts, Img } from './styles'
-
 
 import { ElementsSection1 } from '../../types'
 
