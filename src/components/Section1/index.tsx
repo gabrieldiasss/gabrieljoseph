@@ -18,8 +18,8 @@ export default function Section1({ data }: ElementsSectionProps) {
                         <div key={key} >
                             <h1>{value.title}</h1>
                             <h2>{value.subtitle}</h2>
-                            <a href={value.link_button}><button>QUERO APRENDER</button></a>
-                            <p>De {value.old_price} por {value.new_price} à vista.</p>
+                            {/* <a href={value.link_button}><button>QUERO APRENDER</button></a>
+                            <p>De {value.old_price} por {value.new_price} à vista.</p> */}
                         </div>
                     ))}
                 </Texts>
