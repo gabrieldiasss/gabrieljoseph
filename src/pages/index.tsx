@@ -146,7 +146,7 @@ export const getStaticProps: GetStaticProps = async () => {
             elementsSection1, elementsSection2, elementsSection3, elementsSection4, elementsSection5,
             elementsSection6
         },
-        revalidate: 10
+        revalidate: 1800
     }
 }
 
