@@ -10,24 +10,30 @@ export default function Section1({ data }: ElementsSectionProps) {
 
     return (
         <Container>
-            <Content>
-                <Texts>
-                    <img src="/images/logo.png" alt="Logo Posts e Carrosséis" />
 
-                    {data.map((value, key) => (
-                        <div key={key} >
-                            <h1>{value.title}</h1>
-                            <h2>{value.subtitle}</h2>
-                            {/* <a href={value.link_button}><button>QUERO APRENDER</button></a>
+                <img className='img-mobile' src="/images/logo.png" alt="Logo Posts e Carrosséis" />
+
+                <Content>
+
+                    <Texts>
+
+                        <img className='img-desktop' src="/images/logo.png" alt="Logo Posts e Carrosséis" />
+
+                        {data.map((value, key) => (
+                            <div key={key} >
+                                <h1>{value.title}</h1>
+                                <h2>{value.subtitle}</h2>
+                                {/* <a href={value.link_button}><button>QUERO APRENDER</button></a>
                             <p>De {value.old_price} por {value.new_price} à vista.</p> */}
-                        </div>
-                    ))}
-                </Texts>
+                            </div>
+                        ))}
+                    </Texts>
 
-                <Img>
-                    <img src="/images/gabriel.png" alt="Gabriel Joseph Posts e Carrosséis profissionais"/>
-                </Img>
-            </Content>
+                    <Img>
+                        <img src="/images/gabriel.png" alt="Gabriel Joseph Posts e Carrosséis profissionais" />
+                    </Img>
+                </Content>
+
         </Container>
     )
 }
